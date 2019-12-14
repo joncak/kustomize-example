@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namePrefix: example-api-
+namespace: production
+commonLabels:
+  app: example-api-fun
+  version: v1
+generators:
+- secrets.yaml
